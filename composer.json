@@ -1,0 +1,13 @@
+{
+	"require": {
+		"kostyandrew/aspect-post": "1.0.0"
+	},
+	"require-dev": {
+		"humbug/php-scoper": "^0.18.17"
+	},
+	"scripts": {
+		"lib": [
+			"php-scoper add-prefix --force --output-dir=lib/kostyandrew/aspect-post"
+		]
+	}
+}
