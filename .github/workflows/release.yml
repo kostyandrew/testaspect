@@ -23,7 +23,7 @@ jobs:
         run: composer install --optimize-autoloader
 
       - name: Run PHP-Scoper
-        run: vendor/bin/php-scoper add-prefix
+        run: composer run lib
 
       - name: Remove dev dependencies
         run: composer install --no-dev --optimize-autoloader
