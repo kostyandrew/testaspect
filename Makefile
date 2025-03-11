@@ -2,7 +2,7 @@ NAME = testaspect
 VERSION = 1.0.0
 ARCHIVE = $(NAME)-$(VERSION).zip
 ZIP_FILES = $(shell git ls-files -c -o --exclude-standard; find lib -type f)
-EXCLUDE_FILES = composer.json composer.lock Makefile scoper.inc.php .gitignore .github
+EXCLUDE_FILES = composer.json composer.lock Makefile scoper.inc.php .gitignore .github/\*
 DIST_DIR = dist
 
 .PHONY: all clean zip install update
