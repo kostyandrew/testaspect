@@ -1,5 +1,5 @@
 NAME = testaspect
-VERSION = 1.0.0
+VERSION = $(shell git describe --tags --abbrev=0 2>/dev/null || echo "test")
 ARCHIVE = $(NAME)-$(VERSION).zip
 ZIP_FILES = $(shell git ls-files -c -o --exclude-standard; find lib -type f)
 EXCLUDE_FILES = composer.json composer.lock Makefile scoper.inc.php .gitignore .github/\*
