@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies (including Scoper)
         run: composer install --optimize-autoloader
 
-      - name: Run PHP-Scoper
-        run: composer run lib
-
       - name: Remove dev dependencies
         run: composer install --no-dev --optimize-autoloader
 
