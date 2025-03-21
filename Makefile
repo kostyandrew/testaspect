@@ -2,7 +2,7 @@ NAME = testaspect
 VERSION = $(shell git describe --tags --abbrev=0 2>/dev/null || echo "test")
 ARCHIVE = $(NAME)-$(VERSION).zip
 ZIP_FILES = $(shell git ls-files -c -o --exclude-standard; find lib -type f)
-EXCLUDE_FILES = composer.json composer.lock Makefile scoper.inc.php .gitignore .github/\*
+EXCLUDE_FILES = composer.json composer.lock Makefile scoper.inc.php .gitignore DOCKER_ENV docker_tag output.log .github/\*
 DIST_DIR = dist
 
 .PHONY: all clean zip install update
@@ -21,7 +21,7 @@ clean:
 
 install:
 	@echo "Installing dependencies..."
-	@composer install --no-dev --optimizeвип-autoloader
+	@composer install --no-dev --optimize-autoloader
 
 update:
 	@echo "Updating dependencies..."
